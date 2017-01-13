@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Table</title>
+	<title>Multiple rows and columns</title>
 </head>
 <body>
 <table border=1>
-  <tr>
-    <th>Name</th>
-    <th>Superpowers</th>
-  </tr>
-  <tr>
-    <td>Jessica Jones</td>
-    <td>Strength, resistance to injury</td>
-  </tr>
-  <tr>
-    <td>Superman</td>
-    <td>Invincibility, flight</td>
-  </tr>
+    <tr>
+      <th>Consule</th>
+      <th>Price</th>
+      <th></th>
+      <th>VR</th>
+    </tr>
+    <tr>
+      <td>Xbox</td>
+      <td colspan="2">500</td>
+      <td>some day</td>
+    </tr>
+    
+    <tr>
+      <td rowspan="2">PS4</td>
+      <td>450</td>
+      <td></td>
+      <td>Yes</td>
+   <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td> PC</td>
+      <td> Varies</td>
+      <td></td>
+      <td>Yes</td>
+    </tr>
 </table>
 </body>
 </html>
