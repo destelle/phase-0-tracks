@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<textarea rows="4" cols="50"> 
+  We are taking a poll for different sports to see whcich one is the most popular.
+  </textarea>
+<form name="Sports Vote" action="success.html" method="post">
+  <fieldset>
+    <div>
+      <label>Full name:</label>
+      <input type="text" name="PlayersName">
+    </div>
+
+     <div>
+      <label>City, State</label>
+      <input type="text" name="Location">
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <div>
+      <label>Type of Sport:</label>
+      <select name="Sport">
+        <option value="Sport">Soccer</option>
+        <option value="Sport">Football</option>
+        <option value="Sport">Hockey</option>
+      </select>
+    </div>
+    
+
+    <div>    
+      <label>Todays date:</label>
+      <input type="date" name="date">
+    </div>
+
+    <div>
+      <input type="checkbox" name="cb-agree" value="agree">
+     I agree to keep my vote confidential.
+    </div>
+  </fieldset>
+  
+  <button type="submit">Cast Vote</button>
+</form>
+
+</body>
+</html>

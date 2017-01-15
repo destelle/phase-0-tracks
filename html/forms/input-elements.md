@@ -2,7 +2,7 @@
   <fieldset>
     <div>
       <label>Full name:</label>
-      <input type="text" name="customersname">
+      <input type="text" name="fullname">
     </div>
 
     <div>
