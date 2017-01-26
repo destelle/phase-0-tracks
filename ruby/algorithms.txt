@@ -1,0 +1,27 @@
+elevator(assuming that the robot knows what an elevator is/where it is/also on bottom floor)
+-GO to the elevator
+	-locate the up/down button on the right hand side of the elevator
+	-push the button for which you direction you need to go.in this case up.
+	-wait until the elevator door opens,then walk to the back of the elevator.
+	-turn around and look at the right side of the elevator.
+	-there will be a pannel of buttons
+		-starting at the bottom left hand side of the buttons, scan to the right until the row is done or you find your level.
+		-after reaching the end of the row traverse up one button, then scan left until no buttons left or you find your level.
+		-once your level is found, push your floor button
+	-wait for the elevator to traval to yoor floor
+		-this will be indicated by the doors opening and the light on your floor button going from on to off.
+	-walk out of the elevator onto your floor.
+
+
+	waking up in the morning
+
+	-phone alarm goes off
+		-locate phone on the bedside table to the left.
+		-pick up the phone and turn off the alarm by sliding the alarm to the left.
+	-push the sheets off your body and climb out of bed.
+	-walk straight until you come to the door.
+		-open the door and walk out it
+	-turn right out of the door and walk to the kitchen.
+	-in the right hand side of the kitchen is the coffee maker.
+	-turn on the coffee maker.
+	-with coffee your morning is good to go!
