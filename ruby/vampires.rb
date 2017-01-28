@@ -1,12 +1,13 @@
-name = ""
-age = 0;
-year = 0000;
+
 
 puts "What is your name?"
-name = gets
-name = name.chomp
+myName = gets
+myName = myName.chomp
 
-puts "Hello " + name + ". How old are you? "
-age = gets.chomp.to_i
+puts "Please enter your age."
+myAge = gets.chomp.to_i
 
-puts = age;
+
+puts "What year were you born"
+myYear = gets.chomp.to_i
+puts "#{myName} is #{myAge}, born in #{myYear}!"
