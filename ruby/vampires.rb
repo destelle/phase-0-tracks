@@ -54,14 +54,42 @@ while i < employees
 	if (correctAge == false && (bread == false || health == false))
 		result = "Probably a vampire"
 	end
-	if(correctAge == true && bread == false && health == false)
+	if(correctAge == true && bread != true && health != false)
 		result = "Results incconclusive"
 	end
 	if (myName == "Drake Cula" || myName == "Tu Fang")
 		result = "Definitely a vampire"
 	end
+
+	stop = false
+	count = 0
+	while stop == false
+		if count == 0
+			puts "list allergies one at a time"
+			count +=1
+		end
+		allergies = gets.chomp
+		if allergies == "sunlight"
+			result = "Probably a vampire"
+			break
+
+		else
+			puts "Are you finished listing allergies"
+			stop = gets.chomp
+			case stop
+				when 'y','Y','yes'
+					stop = true;
+				when 'n','N','no'
+					stop = false
+					puts "continue"
+			end
+		end
+	end
+
 	puts result
  	i += 1
 end
+puts "Actually, never mind! What do these questions have to do with anything?
+Let's all be friends."
 	
 	
