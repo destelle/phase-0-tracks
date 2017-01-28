@@ -1,6 +1,12 @@
-puts "What is your name?";
-name = gets;
-puts "Hello" + name + ". How old are you? what year were you born?";
-age = gets;
-year = gets;
-puts = "age is " + age + ", year born is " + year;
+name = ""
+age = 0;
+year = 0000;
+
+puts "What is your name?"
+name = gets
+name = name.chomp
+
+puts "Hello " + name + ". How old are you? "
+age = gets.chomp.to_i
+
+puts = age;
