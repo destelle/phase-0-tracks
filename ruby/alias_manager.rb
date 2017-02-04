@@ -18,6 +18,46 @@ quit = false
 alias_array = []
 original_name = []
 
+def vowels(hname)
+	i = 0
+	while i < hname.length
+		j = 0
+		vowels = ["a" ,"e" , "i", "o" , "u"]
+		while j < vowels.length
+			if hname[i] == vowels.last
+				hname[i] = vowels[0]
+				break
+			elsif hname[i] == vowels[j]
+				hname[i] = vowels[j + 1]
+				break
+			end
+			j+=1
+		end
+	
+		i+=1
+	end
+end
+
+def next_letter(hname)
+	i=0
+while i < hname.length
+	alphebet = ["b" , "c", "d", "f", "g" ,"h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w","x", "y", "z"]
+
+	k = 0
+	while k < alphebet.length
+		if hname[i] == alphebet.last
+			hname[i] = alphebet[0]
+			break
+		elsif (hname[i] == alphebet[k])
+			hname[i] = alphebet[k+1]
+			break
+		end
+		k+=1
+	end
+	i+=1
+end
+
+end
 
 
 
@@ -39,49 +79,14 @@ name = name.split(' ', 2)
 first_name = name[0]
 last_name = name[1]
 
-vowels = "aeiou"
-alphebet = "bcdfghjklmnpqrstvwxyz"
-i = 0
-while i < last_name.length
-	j = 0
-	while j < vowels.length
-		if (last_name[i] == vowels[j])
-			last_name[i] = vowels[j + 1]
-			break
-		end
-		j+=1
-	end
-	k = 0
-	while k < alphebet.length
-		if (last_name[i] == alphebet[k])
-			last_name[i] = alphebet[k+1]
-			break
-		end
-		k+=1
-	end
-	i+=1
-end
 
-i=0
-while i < first_name.length
-	j = 0
-	while j < vowels.length
-		if (first_name[i] == vowels[j])
-			first_name[i] = vowels[j + 1]
-			break
-		end
-		j+=1
-	end
-	k = 0
-	while k < alphebet.length
-		if (first_name[i] == alphebet[k])
-			first_name[i] = alphebet[k+1]
-			break
-		end
-		k+=1
-	end
-	i+=1
-end
+
+
+vowels(last_name)
+next_letter(last_name)
+vowels(first_name)
+next_letter(first_name)
+
 
 alias_name = last_name + " " + first_name
 
@@ -101,4 +106,4 @@ case holder
 	end
 
 end
-alias_array.zip(original_name).each{|fake, real| puts " #{fake} is also know as #{real}"}
+alias_array.zip(original_name).each{|fake, real| puts "#{fake} is also know as #{real}"}
