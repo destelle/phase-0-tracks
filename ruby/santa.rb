@@ -1,5 +1,7 @@
 class Santa
-	
+	attr_reader :age, :gender, :race, :reindeer_ranking
+	attr_accessor :age, :gender, :race, 
+
 
 	def speak
 		puts "Ho, ho, ho! Haaaappy holidays!"
@@ -8,33 +10,7 @@ class Santa
 	def eat_milk_and_cookies(cookie)
 		puts "That was a good #{cookie} cookie"	
 	end
-	#getters
-	def age
-		 @age
-	end
-	def gender
-		 @gender
-	end
-	def race
-		 @race
-	end
-	def reindeer_ranking
-		 @reindeer_ranking
-	end
-
-	#setters
-	def age=(new_age)
-		@age = new_age
-	end
-	def race=(new_race)
-		@race = new_race
-	end
-	def gender=(new_gender)
-		@gender = new_gender
-	end
-	def reindeer_ranking= (new_reindeer_ranking)
-		@reindeer_ranking = new_reindeer_ranking
-	end
+	
 
 	def celerate_birthday
 		@age += 1
