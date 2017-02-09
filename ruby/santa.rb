@@ -39,6 +39,8 @@ class Santa
 	end
 end
 
+gender_array = ["male", "female", "bigender", "fluid", "other"]
+race_array = ["black", "white", "latino", "japanese", "other", "prefer not to say"]
 santas = []
 santas << Santa.new("agender", "black")
 santas << Santa.new("female", "Latino")
@@ -47,10 +49,16 @@ santas << Santa.new("male", "Japanese")
 santas << Santa.new("female", "prefer not to say")
 santas << Santa.new("gender fluid", "Mystical Creature (unicorn)")
 santas << Santa.new("N/A", "N/A")
+i = 0
+while (i < 50)
+	santas[i] = Santa.new(gender_array.sample,race_array.sample)
+	santas[i].age = rand(0...140)
+	i+=1
+end
 
-
+santas[0].gender = "red"
 santas.each do |red|
-	red.gender = "other"
+	
 	puts "#{red.gender}"
 end
 
