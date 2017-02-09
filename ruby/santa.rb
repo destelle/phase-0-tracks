@@ -8,25 +8,40 @@ class Santa
 	def eat_milk_and_cookies(cookie)
 		puts "That was a good #{cookie} cookie"	
 	end
+	#getters
 	def age
-		puts age
+		 @age
 	end
 	def gender
-		puts gender
+		 @gender
 	end
 	def race
-		puts race
+		 @race
 	end
 	def raindeer_ranking
-		puts raindeer_ranking
+		 @raindeer_ranking
 	end
 
-	def initialize(g,r)
+	#setters
+	def age=(new_age)
+		@age = new_age
+	end
+	def race=(new_race)
+		@race = new_race
+	end
+	def gender=(new_gender)
+		@gender = new_gender
+	end
+	def raindeer_ranking= (new_raindeer_ranking)
+		@raindeer_ranking = new_raindeer_ranking
+	end
+
+	def initialize(gender,race)
 		puts "initializing Santa instace..."
-		gender = g
-		race = r
-		reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-		age = 0
+		@gender = gender
+		@race = race
+		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+		@age = 0
 	end
 end
 
@@ -38,8 +53,8 @@ santas << Santa.new("male", "Japanese")
 santas << Santa.new("female", "prefer not to say")
 santas << Santa.new("gender fluid", "Mystical Creature (unicorn)")
 santas << Santa.new("N/A", "N/A")
- i = 0
-while (i < santas.length)
-	santas[i].eat_milk_and_cookies("chocolate chip")
-	i+= 1
+
+
+santas.each do |red|
+	puts "#{red.race}"
 end
