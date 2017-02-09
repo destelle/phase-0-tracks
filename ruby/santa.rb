@@ -18,8 +18,8 @@ class Santa
 	def race
 		 @race
 	end
-	def raindeer_ranking
-		 @raindeer_ranking
+	def reindeer_ranking
+		 @reindeer_ranking
 	end
 
 	#setters
@@ -32,9 +32,27 @@ class Santa
 	def gender=(new_gender)
 		@gender = new_gender
 	end
-	def raindeer_ranking= (new_raindeer_ranking)
-		@raindeer_ranking = new_raindeer_ranking
+	def reindeer_ranking= (new_reindeer_ranking)
+		@reindeer_ranking = new_reindeer_ranking
 	end
+
+	def celerate_birthday
+		@age += 1
+	end
+	def get_mad_at(reindeer)
+		i = 0
+		temp = reindeer
+		while(i < 10)
+			if (@reindeer_ranking[i] == temp)
+				@reindeer_ranking.insert(8,reindeer_ranking.delete_at(i))
+			end
+			i+=1
+		end
+	end
+		
+	
+
+
 
 	def initialize(gender,race)
 		puts "initializing Santa instace..."
@@ -56,5 +74,21 @@ santas << Santa.new("N/A", "N/A")
 
 
 santas.each do |red|
+	red.gender = "other"
+	puts "#{red.gender}"
+end
+
+santas.each do |blue|
+	blue.celerate_birthday
+	puts "#{blue.age}"
+end
+
+santas.each do |yellow|
+	yellow.get_mad_at("Dasher")
+	puts "#{yellow.reindeer_ranking}"
+end
+
+santas.each do |red|
+	
 	puts "#{red.race}"
 end
