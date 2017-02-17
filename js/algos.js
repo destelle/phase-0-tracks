@@ -28,3 +28,26 @@ function compare(obj1,obj2){
 var obj1 = {name: "Steven", age: 54}
 var obj2 = {name: "Tamir", age: 54}
 console.log(compare(obj1,obj2))
+
+function build_array(num){
+  var arr = []
+ for (i = 0; i < num; i++) { 
+    var temp = Math.floor(Math.random() * 10) + 1  
+    arr[i] = ran_word(10);
+  }
+return arr
+}
+
+function ran_word(num){
+  
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+
+    for( var i=0; i < num; i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
+}
+
+  
+console.log(build_array(4))
