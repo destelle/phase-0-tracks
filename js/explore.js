@@ -5,7 +5,7 @@ Method: takes a pasted in string and reverses the word
 output: returns a new string in the inverse order of the paramater string
 
 */
- functuon reverse(s){
+ function reverse(s){
  	 var temp = '';
   for (var i = s.length - 1; i >= 0; i--)
     temp += s[i];
@@ -16,5 +16,7 @@ output: returns a new string in the inverse order of the paramater string
  /*
  Driver Code ======================================================================
  */
-
- console.log( reverse("hello"));
+ word = "hello"
+if (word == word){
+   console.log( reverse(word));
+}
