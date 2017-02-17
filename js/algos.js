@@ -16,3 +16,15 @@ return longest
 var arr = ["long phrase","longest phrase","longer phrase"]
 
 console.log(phrase(arr))
+
+function compare(obj1,obj2){
+  if(obj1[0] == obj2[0] || obj1[1] == obj2[1]){
+    return true
+  }
+  
+  else return false
+}
+
+var obj1 = {name: "Steven", age: 54}
+var obj2 = {name: "Tamir", age: 54}
+console.log(compare(obj1,obj2))
