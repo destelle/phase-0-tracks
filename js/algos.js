@@ -51,3 +51,8 @@ function ran_word(num){
 
   
 console.log(build_array(4))
+for(var k=0; i < 10; k++){
+	var temp = build_array(4);
+	console.log(temp);
+	console.log(phrase(temp));
+}
