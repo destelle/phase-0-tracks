@@ -1,0 +1,87 @@
+sqlite> CREATE TABLE author(
+   ...> author_id INTEGER PRIMARY KEY,
+   ...> first_name VARCHAR(255),
+   ...> last_name VARCHAR(255),
+   ...> awards INTEGER,
+   ...> alive BOOLEAN
+   ...> );
+sqlite> INSERT INTO author(first_name,last_name,awards,alive) VALUES ("James", "Joyce", 14, "false");
+sqlite> INSERT INTO author(first_name,last_name,awards,alive) VALUES ("Marcel", "Proust", 22, "false");
+sqlite> INSERT INTO author(first_name,last_name,awards,alive) VALUES ("Paula", "Hawkins", 3, "true");
+sqlite> INSERT INTO author(first_name,last_name,awards,alive) VALUES ("Stephen", "King", 11, "true");
+sqlite> SELECT * FROM author
+   ...> ;
+1|James|Joyce|14|false
+2|Marcel|Proust|22|false
+3|Paula|Hawkins|3|true
+4|Stephen|King|11|true
+
+sqlite> DROP TABLE library;
+
+sqlite> CREATE TABLE library(
+   ...> id INTEGER PRIMARY KEY,
+   ...> book_name VARCHAR(255),
+   ...> available BOOLEAN,
+   ...> author INT,
+   ...> FOREIGN KEY(author) REFERENCES author (author_id)
+   ...> );
+sqlite> INSERT INTO library(book_name,available,author) VALUES ("End of Watch","true",4);
+sqlite> SELECT * FROM library
+   ...> ;
+1|End of Watch|true|4
+sqlite> INSERT INTO library(book_name,available,author) VALUES ("The Girl on the Train","false",3);
+sqlite> INSERT INTO library(book_name,available,author) VALUES ("Ulysses", "false",1);
+sqlite> INSERT INTO library(book_name,available,author) VALUES ("In Search of Lost Time", "true", 2);
+sqlite> SELECT * FROM library;
+1|End of Watch|true|4
+2|The Girl on the Train|false|3
+3|Ulysses|false|1
+4|In Search of Lost Time|true|2
+sqlite> SELECT * FROM library, author WHERE library.author = author.author_id;
+1|End of Watch|true|4|4|Stephen|King|11|true
+2|The Girl on the Train|false|3|3|Paula|Hawkins|3|true
+3|Ulysses|false|1|1|James|Joyce|14|false
+4|In Search of Lost Time|true|2|2|Marcel|Proust|22|false
+
+================================================================================================================================================================
+start of tests
+
+1.
+sqlite> SELECT * FROM library;
+1|End of Watch|true|4
+2|The Girl on the Train|false|3
+3|Ulysses|false|1
+4|In Search of Lost Time|true|2
+
+2.
+sqlite> UPDATE author SET awards = 7 WHERE first_name = "Stephen";
+sqlite> SELECT * FROM author;
+1|James|Joyce|14|false
+2|Marcel|Proust|22|false
+3|Paula|Hawkins|3|true
+4|Stephen|King|7|true
+
+3.
+sqlite> SELECT * FROM library, author WHERE library.author = author.author_id;
+1|End of Watch|true|4|4|Stephen|King|7|true
+2|The Girl on the Train|false|3|3|Paula|Hawkins|3|true
+3|Ulysses|false|1|1|James|Joyce|14|false
+4|In Search of Lost Time|true|2|2|Marcel|Proust|22|false\
+
+4.
+sqlite> SELECT library.book_name, library.available, author.first_name, author.last_name, author.awards, author.alive FROM library JOIN author ON library.author= author.author_id;
+End of Watch|true|Stephen|King|7|true
+The Girl on the Train|false|Paula|Hawkins|3|true
+Ulysses|false|James|Joyce|14|false
+In Search of Lost Time|true|Marcel|Proust|22|false
+
+5.
+
+sqlite> DELETE FROM library WHERE author=2;
+sqlite> SELECT * FROM library;
+1|End of Watch|true|4
+2|The Girl on the Train|false|3
+3|Ulysses|false|1
+
+
+
