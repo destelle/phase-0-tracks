@@ -1,0 +1,1 @@
+i plan to look at this over the course of serveral days giving myself plenty of breaks. i will test each common area of knowledge. 
