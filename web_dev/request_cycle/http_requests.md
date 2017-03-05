@@ -11,3 +11,5 @@ https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
 GET is used for viewing something, without changing it, while POST is used for changing something
 
 a cookie is a small piece of data sent from a website and stored on the user's computer by the user's web browser while the user is browsing.
+
+
