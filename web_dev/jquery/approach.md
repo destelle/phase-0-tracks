@@ -1,1 +1,1 @@
-i plan to look at this over the course of serveral days giving myself plenty of breaks. i will test each common area of knowledge. 
+i plan to look at this one section at a time beginning with code snipits and learning syntax and style from there. i will test each common area of knowledge. 
